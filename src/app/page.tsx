@@ -143,20 +143,21 @@ export default function Home() {
             {particles.map((particle) => (
               <motion.div
                 key={particle.id}
-                className="absolute w-1 h-1 bg-accent rounded-full"
+                className="absolute w-2 h-2 bg-accent rounded-full opacity-60"
                 style={{
                   left: `${particle.left}%`,
                   top: `${particle.top}%`,
                 }}
                 animate={{
-                  opacity: [0, 1, 0],
-                  scale: [0, 1, 0],
+                  opacity: [0, 1, 0, 1, 0],
+                  scale: [0, 1, 0, 1, 0],
                 }}
                 transition={{
-                  duration: Math.max(1, 3),
-                  repeat: Infinity,
-                  delay: Math.max(0, particle.delay),
+                  duration: 6,
+                  repeat: 9999,
+                  delay: particle.delay,
                   ease: "easeInOut",
+                  repeatType: "loop",
                 }}
               />
             ))}
@@ -175,20 +176,20 @@ export default function Home() {
           >
             <div className="flex justify-center space-x-8 mb-8 opacity-60">
               <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear", repeatType: "loop" }}
+                animate={{ rotate: [0, 90, 180, 270, 360] }}
+                transition={{ duration: 20, repeat: 9999, ease: "linear", repeatType: "loop" }}
               >
                 <Brain className="w-12 h-12 text-accent" />
               </motion.div>
               <motion.div
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", repeatType: "loop" }}
+                animate={{ scale: [1, 1.1, 1.2, 1.1, 1] }}
+                transition={{ duration: 4, repeat: 9999, ease: "easeInOut", repeatType: "loop" }}
               >
                 <Atom className="w-12 h-12 text-accent" />
               </motion.div>
               <motion.div
-                animate={{ opacity: [0.5, 1, 0.5] }}
-                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut", repeatType: "loop" }}
+                animate={{ opacity: [0.5, 0.7, 1, 0.7, 0.5] }}
+                transition={{ duration: 3, repeat: 9999, ease: "easeInOut", repeatType: "loop" }}
               >
                 <CircuitBoard className="w-12 h-12 text-accent" />
               </motion.div>
