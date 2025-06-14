@@ -43,7 +43,7 @@ export default function Home() {
       id: i,
       left: Math.random() * 100,
       top: Math.random() * 100,
-      delay: Math.random() * 2,
+      delay: Math.max(0, Math.random() * 2), // Ensure delay is always non-negative
     }));
     setParticles(newParticles);
     setMounted(true);
@@ -153,9 +153,10 @@ export default function Home() {
                   scale: [0, 1, 0],
                 }}
                 transition={{
-                  duration: 3,
+                  duration: Math.max(1, 3),
                   repeat: Infinity,
-                  delay: particle.delay,
+                  delay: Math.max(0, particle.delay),
+                  ease: "easeInOut",
                 }}
               />
             ))}
@@ -175,19 +176,19 @@ export default function Home() {
             <div className="flex justify-center space-x-8 mb-8 opacity-60">
               <motion.div
                 animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear", repeatType: "loop" }}
               >
                 <Brain className="w-12 h-12 text-accent" />
               </motion.div>
               <motion.div
                 animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", repeatType: "loop" }}
               >
                 <Atom className="w-12 h-12 text-accent" />
               </motion.div>
               <motion.div
                 animate={{ opacity: [0.5, 1, 0.5] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
+                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut", repeatType: "loop" }}
               >
                 <CircuitBoard className="w-12 h-12 text-accent" />
               </motion.div>
