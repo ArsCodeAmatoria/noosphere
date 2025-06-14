@@ -94,7 +94,7 @@ export default function Home() {
         <div 
           className="absolute inset-0 opacity-20"
           style={{
-            background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(0, 255, 136, 0.1), transparent 40%)`
+            background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255, 107, 157, 0.1), transparent 40%)`
           }}
         />
         {mounted && (
@@ -164,7 +164,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
-            whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(0, 255, 136, 0.5)" }}
+            whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(255, 107, 157, 0.5)" }}
             whileTap={{ scale: 0.95 }}
             className="bg-accent text-black font-mono font-bold text-lg px-8 py-4 rounded-none border-2 border-accent hover:bg-transparent hover:text-accent transition-all duration-300"
           >
@@ -229,7 +229,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 whileHover={{ 
                   scale: 1.02,
-                  boxShadow: "0 0 30px rgba(0, 255, 136, 0.2)"
+                  boxShadow: "0 0 30px rgba(255, 107, 157, 0.2)"
                 }}
                 className="bg-secondary/50 border border-border p-8 backdrop-blur-sm hover:border-accent transition-all duration-300"
               >
@@ -309,7 +309,7 @@ export default function Home() {
                 href="#"
                 whileHover={{ 
                   scale: 1.05,
-                  boxShadow: "0 0 30px rgba(0, 255, 136, 0.5)"
+                  boxShadow: "0 0 30px rgba(255, 107, 157, 0.5)"
                 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-3 bg-accent text-black font-mono font-bold px-6 py-3 hover:bg-transparent hover:text-accent border-2 border-accent transition-all duration-300"
@@ -344,14 +344,14 @@ export default function Home() {
             <div className="flex gap-6">
               <motion.a
                 href="#"
-                whileHover={{ scale: 1.1, color: "#00ff88" }}
+                whileHover={{ scale: 1.1, color: "#ff6b9d" }}
                 className="text-muted hover:text-accent transition-colors"
               >
                 <Github className="w-5 h-5" />
               </motion.a>
               <motion.a
                 href="#"
-                whileHover={{ scale: 1.1, color: "#00ff88" }}
+                whileHover={{ scale: 1.1, color: "#ff6b9d" }}
                 className="text-muted hover:text-accent transition-colors"
               >
                 <Network className="w-5 h-5" />
