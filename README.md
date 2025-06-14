@@ -22,7 +22,7 @@
 [![Quantum](https://img.shields.io/badge/Quantum_Computing-QML/Qiskit-FF6B9D?style=for-the-badge&logo=ibm&logoColor=white)](https://qiskit.org/)
 [![Neural Networks](https://img.shields.io/badge/Neural_Networks-8D--10D-E91E63?style=for-the-badge&logo=brain&logoColor=white)](#)
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://noosphere-ptszn4j4t-kojin-foxs-projects.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://noosphere-psi.vercel.app/)
 [![GitHub](https://img.shields.io/badge/GitHub-Source-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ArsCodeAmatoria/noosphere)
 
 ---
@@ -135,16 +135,16 @@ git push origin main
 
 ## Live Demo
 
-Experience the Noosphere: **[noosphere-ptszn4j4t-kojin-foxs-projects.vercel.app](https://noosphere-ptszn4j4t-kojin-foxs-projects.vercel.app)**
+Experience the Noosphere: **[noosphere-psi.vercel.app](https://noosphere-psi.vercel.app/)**
 
 ## Project Status
 
-- ✅ **Landing Page**: Complete with animations
-- ✅ **Dark Theme**: Neural pink aesthetic  
-- ✅ **Responsive Design**: All devices supported
-- 🔄 **Haskell Backend**: Theoretical implementation
-- 🔄 **Quantum Layer**: Research & development
-- 🔄 **C Runtime**: Hardware interface planning
+- **Landing Page**: Complete with animations
+- **Dark Theme**: Neural pink aesthetic  
+- **Responsive Design**: All devices supported
+- **Haskell Backend**: Theoretical implementation
+- **Quantum Layer**: Research & development
+- **C Runtime**: Hardware interface planning
 
 ## Contributing
 
@@ -163,7 +163,7 @@ This project is exploring the intersection of consciousness, computation, and re
 ## Connect
 
 - **GitHub**: [@ArsCodeAmatoria](https://github.com/ArsCodeAmatoria)
-- **Website**: [Live Demo](https://noosphere-ptszn4j4t-kojin-foxs-projects.vercel.app)
+- **Website**: [Live Demo](https://noosphere-psi.vercel.app/)
 - **Email**: contact@noosphere.dev
 
 ---
