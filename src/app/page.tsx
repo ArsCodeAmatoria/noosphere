@@ -19,7 +19,6 @@ import {
   Layers,
   Infinity,
   Target,
-  BookOpen,
   Microscope,
   Waves,
   Dna,
@@ -765,7 +764,7 @@ measure x -> classical_bit;`}
             <h3 className="font-mono text-3xl font-bold mb-8 text-accent">Interdimensional Dialogue Interface</h3>
             <p className="text-lg text-gray-300 leading-relaxed mb-8">
               Enables symbolic reasoning and communication across dimensional boundaries through 
-              context-aware reflection functions that adapt responses based on the observer's 
+              context-aware reflection functions that adapt responses based on the observer&apos;s 
               dimensional perspective.
             </p>
             
