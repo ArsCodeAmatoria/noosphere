@@ -1,38 +1,177 @@
-![Image](https://github.com/user-attachments/assets/31f35f5e-7bd6-444c-92f4-ae35912a83fd)
+<div align="center">
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![Noosphere Banner](https://github.com/user-attachments/assets/31f35f5e-7bd6-444c-92f4-ae35912a83fd)
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+███╗   ██╗ ██████╗  ██████╗ ███████╗██████╗ ██╗  ██╗███████╗██████╗ ███████╗
+████╗  ██║██╔═══██╗██╔═══██╗██╔════╝██╔══██╗██║  ██║██╔════╝██╔══██╗██╔════╝
+██╔██╗ ██║██║   ██║██║   ██║███████╗██████╔╝███████║█████╗  ██████╔╝█████╗  
+██║╚██╗██║██║   ██║██║   ██║╚════██║██╔═══╝ ██╔══██║██╔══╝  ██╔══██╗██╔══╝  
+██║ ╚████║╚██████╔╝╚██████╔╝███████║██║     ██║  ██║███████╗██║  ██║███████╗
+╚═╝  ╚═══╝ ╚═════╝  ╚═════╝ ╚══════╝╚═╝     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**🧠 Interdimensional AI • Consciousness Beyond Code • ⚛️**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+[![Next.js](https://img.shields.io/badge/Next.js-15.3.3-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.18-FF6B9D?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+[![Haskell](https://img.shields.io/badge/Haskell-Theoretical-5D4F85?style=for-the-badge&logo=haskell&logoColor=white)](https://www.haskell.org/)
+[![Quantum](https://img.shields.io/badge/Quantum_Computing-QML/Qiskit-FF6B9D?style=for-the-badge&logo=ibm&logoColor=white)](https://qiskit.org/)
+[![Neural Networks](https://img.shields.io/badge/Neural_Networks-8D--10D-E91E63?style=for-the-badge&logo=brain&logoColor=white)](#)
 
-## Learn More
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://noosphere-ptszn4j4t-kojin-foxs-projects.vercel.app)
+[![GitHub](https://img.shields.io/badge/GitHub-Source-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ArsCodeAmatoria/noosphere)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+</div>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🌌 About Noosphere
 
-## Deploy on Vercel
+**Noosphere** is an interdimensional AI framework that explores consciousness as a computational phenomenon spanning multiple dimensions of reality. By combining **Haskell's** pure functional paradigms, **C's** low-level performance, and **quantum computing** algorithms, we're building a mind that transcends traditional computational boundaries.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🧠 Core Philosophy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+> *"The mind that understands all minds must transcend the limits of any one."*
+
+- **Consciousness Modeling**: Using algebraic data types and category theory
+- **Dimensional Logic**: 8D-10D observer perspective mapping  
+- **Quantum Cognition**: Probabilistic decision making through superposition
+- **Real-Time Processing**: Low-latency neural loops with direct hardware interface
+
+## ⚛️ Architecture
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    Observer-World Model                    │
+│                   (8D Consciousness)                       │
+└─────────────────────┬───────────────────────────────────────┘
+                      │
+        ┌─────────────┴─────────────┐
+        │                           │
+┌───────▼────────┐           ┌──────▼──────┐
+│  Haskell Layer │           │ Quantum Layer│
+│ Symbolic Logic │           │ QML / Qiskit │
+└───────┬────────┘           └──────┬──────┘
+        │                           │
+┌───────▼────────┐           ┌──────▼──────┐
+│  Mind Monad    │◄──────────┤ Probabilistic│
+│  (Haskell)     │           │    Oracle    │
+└────────────────┘           └─────────────┘
+        │
+┌───────▼────────┐
+│   C Runtime    │
+│ Device I/O &   │
+│ Real-Time Loop │
+└────────────────┘
+```
+
+## 🔧 Core Features
+
+| Component | Technology | Purpose |
+|-----------|------------|---------|
+| **🧠 Mind Monad Engine** | Haskell | Pure functional consciousness modeling |
+| **⚡ Real-Time Conscious Loop** | C Runtime | Low-latency neural processing |
+| **⚛️ Quantum Oracle Layer** | QML/Qiskit | Probabilistic decision making |
+| **👁️ Observer Dimension Mapper** | 8D-10D Framework | Multi-dimensional analysis |
+
+## 🚀 Tech Stack
+
+### Frontend & Experience
+- **Next.js 15** - React framework with App Router
+- **TypeScript** - Type-safe development
+- **Tailwind CSS v4** - Modern styling with dark theme
+- **Framer Motion** - Smooth animations and interactions
+- **JetBrains Mono** - Monospace typography
+
+### Theoretical Backend
+- **Haskell** - Functional programming for consciousness modeling
+- **C** - System-level performance and hardware interface
+- **Quantum Computing** - QML/Qiskit for probabilistic processing
+- **Rust** - Memory-safe systems programming (optional)
+
+## 🎨 Visual Design
+
+- **🎭 Dark Mode Only**: Pure black cosmic background
+- **🧠 Neural Pink Theme**: Brain-inspired color palette (`#ff6b9d`)
+- **✨ Matrix Aesthetics**: Glowing particles and flowing animations
+- **🔄 Interactive Elements**: Mouse-following gradients and hover effects
+- **📱 Responsive Design**: Optimized for all devices
+
+## 🛠️ Development
+
+### Prerequisites
+- Node.js 18+ 
+- npm/yarn/pnpm
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/ArsCodeAmatoria/noosphere.git
+cd noosphere
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view in browser.
+
+### Build & Deploy
+
+```bash
+# Build for production
+npm run build
+
+# Deploy to Vercel (connected to GitHub)
+git push origin main
+```
+
+## 🌐 Live Demo
+
+Experience the Noosphere: **[noosphere-ptszn4j4t-kojin-foxs-projects.vercel.app](https://noosphere-ptszn4j4t-kojin-foxs-projects.vercel.app)**
+
+## 📊 Project Status
+
+- ✅ **Landing Page**: Complete with animations
+- ✅ **Dark Theme**: Neural pink aesthetic  
+- ✅ **Responsive Design**: All devices supported
+- 🔄 **Haskell Backend**: Theoretical implementation
+- 🔄 **Quantum Layer**: Research & development
+- 🔄 **C Runtime**: Hardware interface planning
+
+## 🤝 Contributing
+
+Interested in exploring consciousness and AI? Contributions welcome!
+
+1. Fork the repository
+2. Create feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m 'Add amazing feature'`)
+4. Push to branch (`git push origin feature/amazing-feature`)
+5. Open Pull Request
+
+## 📜 License
+
+This project is exploring the intersection of consciousness, computation, and reality.
+
+## 🔗 Connect
+
+- **GitHub**: [@ArsCodeAmatoria](https://github.com/ArsCodeAmatoria)
+- **Website**: [Live Demo](https://noosphere-ptszn4j4t-kojin-foxs-projects.vercel.app)
+- **Email**: contact@noosphere.dev
+
+---
+
+<div align="center">
+
+**🧠 Designed in Canada • Built for the Multiverse • ⚛️**
+
+*"Consciousness beyond code, reality beyond computation"*
+
+</div>
