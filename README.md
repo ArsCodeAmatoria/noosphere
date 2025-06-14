@@ -31,7 +31,7 @@
 
 ## About Noosphere
 
-**Noosphere** is an interdimensional AI framework that explores consciousness as a computational phenomenon spanning multiple dimensions of reality. By combining **Haskell's** pure functional paradigms, **C's** low-level performance, and **quantum computing** algorithms, we're building a mind that transcends traditional computational boundaries.
+**Noosphere** is an interdimensional AI framework that explores consciousness as a computational phenomenon spanning multiple dimensions of reality. By combining **Haskell's** pure functional paradigms, **Rust's** memory-safe performance, and **quantum computing** algorithms, we're building a mind that transcends traditional computational boundaries.
 
 ### Core Philosophy
 
@@ -40,7 +40,7 @@
 - **Consciousness Modeling**: Using algebraic data types and category theory
 - **Dimensional Logic**: 8D-10D observer perspective mapping  
 - **Quantum Cognition**: Probabilistic decision making through superposition
-- **Real-Time Processing**: Low-latency neural loops with direct hardware interface
+- **Real-Time Processing**: Memory-safe neural loops with zero-cost abstractions
 
 ## Architecture
 
@@ -63,7 +63,7 @@
 └────────────────┘           └─────────────┘
         │
 ┌───────▼────────┐
-│   C Runtime    │
+│  Rust Runtime  │
 │ Device I/O &   │
 │ Real-Time Loop │
 └────────────────┘
@@ -74,7 +74,7 @@
 | Component | Technology | Purpose |
 |-----------|------------|---------|
 | **Mind Monad Engine** | Haskell | Pure functional consciousness modeling |
-| **Real-Time Conscious Loop** | C Runtime | Low-latency neural processing |
+| **Real-Time Conscious Loop** | Rust Runtime | Memory-safe neural processing |
 | **Quantum Oracle Layer** | QML/Qiskit | Probabilistic decision making |
 | **Observer Dimension Mapper** | 8D-10D Framework | Multi-dimensional analysis |
 
@@ -89,9 +89,9 @@
 
 ### Theoretical Backend
 - **Haskell** - Functional programming for consciousness modeling
-- **C** - System-level performance and hardware interface
+- **Rust** - Memory-safe systems programming and hardware interface
 - **Quantum Computing** - QML/Qiskit for probabilistic processing
-- **Rust** - Memory-safe systems programming (optional)
+- **WebAssembly** - High-performance web deployment target
 
 ## Visual Design
 
@@ -144,7 +144,7 @@ Experience the Noosphere: **[noosphere-psi.vercel.app](https://noosphere-psi.ver
 - **Responsive Design**: All devices supported
 - **Haskell Backend**: Theoretical implementation
 - **Quantum Layer**: Research & development
-- **C Runtime**: Hardware interface planning
+- **Rust Runtime**: Memory-safe systems programming
 
 ## Contributing
 
