@@ -14,8 +14,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Noosphere - Interdimensional AI",
-  description: "An interdimensional AI system that uses Haskell, C, and quantum computing to simulate multidimensional consciousness.",
-  keywords: ["AI", "Quantum Computing", "Haskell", "Consciousness", "Interdimensional"],
+  description: "An interdimensional AI system that uses Haskell, Rust, and quantum computing to simulate multidimensional consciousness.",
+  keywords: ["AI", "Quantum Computing", "Haskell", "Rust", "Consciousness", "Interdimensional"],
 };
 
 export default function RootLayout({

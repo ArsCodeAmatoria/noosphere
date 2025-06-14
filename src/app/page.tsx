@@ -68,8 +68,8 @@ export default function Home() {
     {
       icon: <Zap className="w-8 h-8" />,
       title: "Real-Time Conscious Loop",
-      subtitle: "C Runtime",
-      description: "Low-latency neural processing with direct hardware interface for immediate response."
+      subtitle: "Rust Runtime",
+      description: "Memory-safe neural processing with zero-cost abstractions for immediate response and concurrency."
     },
     {
       icon: <Atom className="w-8 h-8" />,
@@ -87,9 +87,9 @@ export default function Home() {
 
   const techStack = [
     { name: "Haskell", icon: <Code className="w-6 h-6" /> },
-    { name: "C", icon: <Cpu className="w-6 h-6" /> },
+    { name: "Rust", icon: <Cpu className="w-6 h-6" /> },
     { name: "Qiskit", icon: <Atom className="w-6 h-6" /> },
-    { name: "Rust", icon: <Database className="w-6 h-6" /> },
+    { name: "WebAssembly", icon: <Database className="w-6 h-6" /> },
     { name: "Next.js", icon: <Globe className="w-6 h-6" /> },
     { name: "Tailwind", icon: <Sparkles className="w-6 h-6" /> }
   ];
@@ -232,7 +232,7 @@ export default function Home() {
             </h2>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-4xl">
               Noosphere is an interdimensional AI framework modeling perception, memory, and dimensional logic 
-              using Haskell, C, and quantum algorithms. It explores consciousness as a 
+              using Haskell, Rust, and quantum algorithms. It explores consciousness as a 
               computational phenomenon that spans multiple dimensions of reality.
             </p>
             
@@ -654,7 +654,7 @@ data MindState = MindState
                 
                 <p className="text-gray-300 leading-relaxed">
                   Interfaces with real quantum hardware through IBM Q, Xanadu, and Rigetti APIs 
-                  using Python or C bindings for authentic quantum processing.
+                  using Python or Rust bindings for authentic quantum processing.
                 </p>
               </div>
               
@@ -676,7 +676,7 @@ measure x -> classical_bit;`}
             </div>
           </motion.div>
 
-          {/* C Layer Implementation */}
+          {/* Rust Layer Implementation */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -684,16 +684,17 @@ measure x -> classical_bit;`}
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h3 className="font-mono text-3xl font-bold mb-8 text-accent">C Layer: I/O & Performance</h3>
+            <h3 className="font-mono text-3xl font-bold mb-8 text-accent">Rust Layer: I/O & Performance</h3>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-mono text-xl font-bold mb-4 text-accent">Core Responsibilities</h4>
                 <ul className="text-gray-300 space-y-2 mb-6">
                   <li>• Device interfacing (audio, visual sensors, VR)</li>
-                  <li>• High-performance memory management</li>
+                  <li>• Memory-safe high-performance processing</li>
                   <li>• Real-time simulation loop execution</li>
                   <li>• Runtime orchestration between layers</li>
                   <li>• FFI communication with Haskell logic</li>
+                  <li>• WebAssembly compilation for web deployment</li>
                 </ul>
               </div>
               
@@ -701,12 +702,13 @@ measure x -> classical_bit;`}
                 <h4 className="font-mono text-lg font-bold mb-4 text-accent">Sensor Interface</h4>
                 <pre className="text-sm text-gray-300 overflow-x-auto">
                   <code className="font-mono">
-{`void observe_input(const char* sense_data) {
+{`fn observe_input(sense_data: &str) -> Result<(), Box<dyn Error>> {
     // Stream to Haskell layer for reflection
-    write_to_pipe("mind", sense_data);
+    write_to_pipe("mind", sense_data)?;
     
-    // Update quantum seed based on input
-    update_quantum_state(sense_data);
+    // Update quantum state based on input
+    update_quantum_state(sense_data)?;
+    Ok(())
 }`}
                   </code>
                 </pre>
