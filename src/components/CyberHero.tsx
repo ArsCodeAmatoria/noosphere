@@ -2,7 +2,7 @@
 
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Text, Float, Sparkles, Environment } from '@react-three/drei';
-import { useRef, useMemo } from 'react';
+import { useRef, useMemo, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import * as THREE from 'three';
 
@@ -55,6 +55,9 @@ function CyberGrid() {
 }
 
 function FloatingCode() {
+  const [codePositions, setCodePositions] = useState<Array<[number, number, number]>>([]);
+  const [mounted, setMounted] = useState(false);
+
   const codeSnippets = [
     "data Mind = Pure | IO",
     "fmap :: (a -> b) -> f a -> f b", 
@@ -63,16 +66,27 @@ function FloatingCode() {
     "observe :: Quantum a -> Classical a"
   ];
 
+  useEffect(() => {
+    // Generate positions on client side only
+    const positions: Array<[number, number, number]> = codeSnippets.map(() => [
+      (Math.random() - 0.5) * 20,
+      (Math.random() - 0.5) * 10 + 5,
+      (Math.random() - 0.5) * 20
+    ]);
+    setCodePositions(positions);
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null; // Don't render on server
+  }
+
   return (
     <group>
       {codeSnippets.map((code, index) => (
         <Float key={index} speed={1 + index * 0.2} rotationIntensity={0.5} floatIntensity={1}>
           <Text
-            position={[
-              (Math.random() - 0.5) * 20,
-              (Math.random() - 0.5) * 10 + 5,
-              (Math.random() - 0.5) * 20
-            ]}
+            position={codePositions[index] || [0, 0, 0]}
             fontSize={0.2}
             color="#00ff88"
             anchorX="center"
@@ -105,6 +119,54 @@ function Scene() {
       <Environment preset="night" />
       <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.5} />
     </>
+  );
+}
+
+function MatrixRain() {
+  const [matrixColumns, setMatrixColumns] = useState<Array<{
+    left: string;
+    animationDelay: string;
+    animationDuration: string;
+    characters: string[];
+  }>>([]);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    // Generate matrix rain data on client side only
+    const columns = Array.from({ length: 20 }).map(() => ({
+      left: `${Math.random() * 100}%`,
+      animationDelay: `${Math.random() * 10}s`,
+      animationDuration: `${10 + Math.random() * 10}s`,
+      characters: Array.from({ length: 20 }).map(() => 
+        String.fromCharCode(0x30A0 + Math.random() * 96)
+      )
+    }));
+    setMatrixColumns(columns);
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null; // Don't render on server
+  }
+
+  return (
+    <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      {matrixColumns.map((column, i) => (
+        <div
+          key={i}
+          className="absolute text-[#00ff88] font-mono text-xs opacity-30 matrix-text"
+          style={{
+            left: column.left,
+            animationDelay: column.animationDelay,
+            animationDuration: column.animationDuration
+          }}
+        >
+          {column.characters.map((char, j) => (
+            <div key={j}>{char}</div>
+          ))}
+        </div>
+      ))}
+    </div>
   );
 }
 
@@ -162,25 +224,7 @@ export default function CyberHero() {
       <div className="absolute inset-0 opacity-10 pointer-events-none cyber-grid" />
       
       {/* Matrix Rain Effect */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {Array.from({ length: 20 }).map((_, i) => (
-          <div
-            key={i}
-            className="absolute text-[#00ff88] font-mono text-xs opacity-30 matrix-text"
-            style={{
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 10}s`,
-              animationDuration: `${10 + Math.random() * 10}s`
-            }}
-          >
-            {Array.from({ length: 20 }).map((_, j) => (
-              <div key={j}>
-                {String.fromCharCode(0x30A0 + Math.random() * 96)}
-              </div>
-            ))}
-          </div>
-        ))}
-      </div>
+      <MatrixRain />
     </div>
   );
 } 
