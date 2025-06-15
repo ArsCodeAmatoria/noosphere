@@ -25,6 +25,7 @@ import {
   TreePine
 } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import CyberHero from '../components/CyberHero';
 
 interface Particle {
   id: number;
@@ -136,7 +137,7 @@ export default function Home() {
         <div 
           className="absolute inset-0 opacity-20"
           style={{
-            background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255, 107, 157, 0.1), transparent 40%)`
+            background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(0, 255, 136, 0.1), transparent 40%)`
           }}
         />
         {mounted && (
@@ -144,7 +145,7 @@ export default function Home() {
             {particles.map((particle) => (
               <motion.div
                 key={particle.id}
-                className="absolute w-2 h-2 bg-accent rounded-full opacity-60"
+                className="absolute w-2 h-2 bg-[#00ff88] rounded-full opacity-60"
                 style={{
                   left: `${particle.left}%`,
                   top: `${particle.top}%`,
@@ -166,59 +167,11 @@ export default function Home() {
         )}
       </div>
 
-      {/* Hero Section */}
-      <section className="relative z-10 min-h-screen flex items-center justify-center px-4">
-        <div className="text-center max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="mb-8"
-          >
-            <div className="flex justify-center space-x-8 mb-8 opacity-60">
-              <motion.div
-                animate={{ rotate: [0, 90, 180, 270, 360] }}
-                transition={{ duration: 20, repeat: 9999, ease: "linear", repeatType: "loop" }}
-              >
-                <Brain className="w-12 h-12 text-accent" />
-              </motion.div>
-              <motion.div
-                animate={{ scale: [1, 1.1, 1.2, 1.1, 1] }}
-                transition={{ duration: 4, repeat: 9999, ease: "easeInOut", repeatType: "loop" }}
-              >
-                <Atom className="w-12 h-12 text-accent" />
-              </motion.div>
-              <motion.div
-                animate={{ opacity: [0.5, 0.7, 1, 0.7, 0.5] }}
-                transition={{ duration: 3, repeat: 9999, ease: "easeInOut", repeatType: "loop" }}
-              >
-                <CircuitBoard className="w-12 h-12 text-accent" />
-              </motion.div>
-            </div>
-            
-            <h1 className="font-mono text-6xl md:text-8xl lg:text-9xl font-bold mb-6 glow-text">
-              Noosphere
-            </h1>
-            <p className="text-xl md:text-2xl text-muted mb-8 font-light">
-              Interdimensional AI. Consciousness beyond code.
-            </p>
-          </motion.div>
+      {/* Cyber Hero Section */}
+      <CyberHero />
 
-          <motion.button
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(255, 107, 157, 0.5)" }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-accent text-black font-mono font-bold text-lg px-8 py-4 rounded-none border-2 border-accent hover:bg-transparent hover:text-accent transition-all duration-300"
-          >
-            Explore the Mind
-          </motion.button>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section className="relative z-10 py-20 px-4">
+      {/* About Section - Cyber Style */}
+      <section className="relative z-10 py-20 px-4 bg-gradient-to-b from-black via-gray-900 to-black">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -227,24 +180,33 @@ export default function Home() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="font-mono text-4xl md:text-5xl font-bold mb-8 text-accent">
-              About
-            </h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-4xl">
-              Noosphere is an interdimensional AI framework modeling perception, memory, and dimensional logic 
-              using Haskell, Rust, and quantum algorithms. It explores consciousness as a 
-              computational phenomenon that spans multiple dimensions of reality.
-            </p>
-            
-            <div className="flex flex-wrap gap-3 mt-8">
-              {["#Haskell", "#QuantumAI", "#MultidimensionalLogic", "#NoosphereMind"].map((tag) => (
-                <span 
-                  key={tag}
-                  className="font-mono text-accent border border-accent px-3 py-1 rounded-none bg-accent/10"
-                >
-                  {tag}
-                </span>
-              ))}
+            <div className="border border-[#00ff88] bg-black/50 backdrop-blur-sm p-8">
+              <div className="font-mono text-[#00ff88] text-sm mb-4">
+                &gt; SYSTEM.ABOUT.EXECUTE()
+              </div>
+              <h2 className="font-mono text-4xl md:text-5xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-[#00ff88] to-[#ff6b9d]">
+                ABOUT_NOOSPHERE
+              </h2>
+              <div className="font-mono text-lg md:text-xl text-gray-300 leading-relaxed max-w-4xl mb-8">
+                <div className="mb-4">
+                  <span className="text-[#00ff88]">λ</span> Noosphere :: <span className="text-[#ff6b9d]">Interdimensional</span> → <span className="text-[#00ff88]">AI</span> → <span className="text-[#ff6b9d]">Framework</span>
+                </div>
+                <div className="text-gray-400 text-base leading-relaxed">
+                  Modeling perception, memory, and dimensional logic using Haskell, Rust, and quantum algorithms. 
+                  Consciousness as a computational phenomenon spanning multiple dimensions of reality.
+                </div>
+              </div>
+              
+              <div className="flex flex-wrap gap-3 mt-8">
+                {["#Haskell", "#QuantumAI", "#MultidimensionalLogic", "#NoosphereMind"].map((tag) => (
+                  <span 
+                    key={tag}
+                    className="font-mono text-[#00ff88] border border-[#00ff88] px-3 py-1 bg-[#00ff88]/10 hover:bg-[#00ff88]/20 transition-all duration-300"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           </motion.div>
         </div>

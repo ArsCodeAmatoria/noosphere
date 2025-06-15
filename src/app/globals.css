@@ -8,6 +8,10 @@
   --secondary: #1a1a1a;
   --border: #333333;
   --muted: #666666;
+  --cyber-green: #00ff88;
+  --cyber-pink: #ff6b9d;
+  --cyber-blue: #00d4ff;
+  --cyber-purple: #8b5cf6;
 }
 
 @theme inline {
@@ -75,4 +79,106 @@ body {
   animation: matrix-rain linear infinite;
   animation-duration: 4s;
   animation-delay: calc(var(--delay) * 0.1s);
+}
+
+/* Cyber Glow Effects */
+.cyber-glow {
+  text-shadow: 0 0 10px var(--cyber-green), 0 0 20px var(--cyber-green), 0 0 30px var(--cyber-green);
+}
+
+.cyber-glow-pink {
+  text-shadow: 0 0 10px var(--cyber-pink), 0 0 20px var(--cyber-pink), 0 0 30px var(--cyber-pink);
+}
+
+.cyber-border {
+  border: 1px solid var(--cyber-green);
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+.cyber-border:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+}
+
+/* Matrix-style scrolling text */
+@keyframes matrix-scroll {
+  0% { transform: translateY(-100%); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+.matrix-text {
+  animation: matrix-scroll 10s linear infinite;
+}
+
+/* Glitch effect */
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+.glitch:hover {
+  animation: glitch 0.3s ease-in-out;
+}
+
+/* Cyber grid background */
+.cyber-grid {
+  background-image: 
+    linear-gradient(rgba(0, 255, 136, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 136, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Terminal-style cursor */
+@keyframes cursor-blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.cursor::after {
+  content: '█';
+  color: var(--cyber-green);
+  animation: cursor-blink 1s infinite;
+}
+
+/* Neon button effect */
+.neon-button {
+  background: linear-gradient(45deg, var(--cyber-green), var(--cyber-pink));
+  border: none;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.neon-button:hover {
+  box-shadow: 
+    0 0 20px var(--cyber-green),
+    0 0 40px var(--cyber-green),
+    0 0 60px var(--cyber-green);
+  transform: scale(1.05);
+}
+
+/* Holographic effect */
+.holographic {
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(0, 255, 136, 0.1),
+    transparent,
+    rgba(255, 107, 157, 0.1),
+    transparent
+  );
+  background-size: 200% 200%;
+  animation: holographic-shift 3s ease-in-out infinite;
+}
+
+@keyframes holographic-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
