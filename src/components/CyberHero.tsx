@@ -55,44 +55,45 @@ function CyberGrid() {
 }
 
 function FloatingCode() {
-  const [codePositions, setCodePositions] = useState<Array<[number, number, number]>>([]);
-  const [mounted, setMounted] = useState(false);
+  const [floatingCode, setFloatingCode] = useState<Array<{
+    id: number;
+    code: string;
+    left: number;
+    top: number;
+    delay: number;
+  }>>([]);
 
-  const codeSnippets = [
+  const codeSnippets = useMemo(() => [
     "data Mind = Pure | IO",
     "fmap :: (a -> b) -> f a -> f b", 
     ">>= :: m a -> (a -> m b) -> m b",
     "newtype Consciousness a = C (State -> (a, State))",
     "observe :: Quantum a -> Classical a"
-  ];
+  ], []);
 
   useEffect(() => {
-    // Generate positions on client side only
-    const positions: Array<[number, number, number]> = codeSnippets.map(() => [
-      (Math.random() - 0.5) * 20,
-      (Math.random() - 0.5) * 10 + 5,
-      (Math.random() - 0.5) * 20
-    ]);
-    setCodePositions(positions);
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null; // Don't render on server
-  }
+    const newSnippets = Array.from({ length: 8 }, (_, i) => ({
+      id: i,
+      code: codeSnippets[Math.floor(Math.random() * codeSnippets.length)],
+      left: Math.random() * 80 + 10,
+      top: Math.random() * 80 + 10,
+      delay: Math.random() * 2
+    }));
+    setFloatingCode(newSnippets);
+  }, [codeSnippets]);
 
   return (
     <group>
-      {codeSnippets.map((code, index) => (
-        <Float key={index} speed={1 + index * 0.2} rotationIntensity={0.5} floatIntensity={1}>
+      {floatingCode.map((item) => (
+        <Float key={item.id} speed={1 + item.delay} rotationIntensity={0.5} floatIntensity={1}>
           <Text
-            position={codePositions[index] || [0, 0, 0]}
+            position={[item.left, 0, item.top]}
             fontSize={0.2}
             color="#00ff88"
             anchorX="center"
             anchorY="middle"
           >
-            {code}
+            {item.code}
           </Text>
         </Float>
       ))}

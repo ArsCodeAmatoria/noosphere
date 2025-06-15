@@ -87,7 +87,7 @@ body {
 }
 
 .cyber-glow-pink {
-  text-shadow: 0 0 10px var(--cyber-pink), 0 0 20px var(--cyber-pink), 0 0 30px var(--cyber-pink);
+  text-shadow: 0 0 10px rgba(255, 107, 157, 0.8), 0 0 20px rgba(255, 107, 157, 0.4);
 }
 
 .cyber-border {
@@ -181,4 +181,61 @@ body {
 @keyframes holographic-shift {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
+}
+
+.cyber-button-primary {
+  background: linear-gradient(45deg, #00ff88, #00cc6a);
+  color: #000;
+  border: 2px solid #00ff88;
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-button-primary:hover {
+  background: transparent;
+  color: #00ff88;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+}
+
+.cyber-button-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.cyber-button-primary:hover::before {
+  left: 100%;
+}
+
+.cyber-button-secondary {
+  background: transparent;
+  color: #ff6b9d;
+  border: 2px solid #ff6b9d;
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-button-secondary:hover {
+  background: rgba(255, 107, 157, 0.1);
+  box-shadow: 0 0 20px rgba(255, 107, 157, 0.3);
+}
+
+.cyber-button-secondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 107, 157, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.cyber-button-secondary:hover::before {
+  left: 100%;
 }
